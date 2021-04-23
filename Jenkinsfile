@@ -9,7 +9,6 @@ pipeline {
 
     stage('node_setting') {
       steps {
-        echo "${nodejs}"
         sh 'npm -v'
         sh 'node -v'
         sh 'mkdir source'
