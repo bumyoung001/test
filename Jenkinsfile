@@ -31,7 +31,4 @@ mkdir html'''
     }
 
   }
-  environment {
-    nodejs = 'tool \'nodejs\''
-  }
 }
