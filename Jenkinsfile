@@ -20,7 +20,4 @@ pipeline {
     }
 
   }
-  tools {
-    nodejs 'nodejs'
-  }
 }
