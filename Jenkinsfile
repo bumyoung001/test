@@ -19,11 +19,11 @@ pipeline {
     }
 
     stage('node_setting') {
-      steps {
-        echo "${nodejs}"
-        env.NODE_HOME = "${nodejs}"
-        env.PATH = "${nodejs}/bin:${env.PATH}"
-      }
+     // steps {
+       // echo "${nodejs}"
+       // env.NODE_HOME = "${nodejs}"
+        //env.PATH = "${nodejs}/bin:${env.PATH}"
+     // }
       steps {
         sh 'npm -v'
         sh 'node -v'
