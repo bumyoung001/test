@@ -15,6 +15,20 @@ pipeline {
         sh 'mkdir html'
       }
     }
+
+    stage('git_clone') {
+      steps {
+        dir(path: 'source') {
+          git 'https://github.com/bumyoung001/test.git'
+          sh 'rm -rf ./.git'
+          sh 'npm i'
+          sh 'npm run build'
+          sh 'cp -rf build/. ../html'
+        }
+
+      }
+    }
+
   }
   tools {
     nodejs 'nodejs'
