@@ -20,12 +20,15 @@ pipeline {
 
     stage('node_setting') {
       steps {
-        sh '''env.NODE_HOME  = "${nodejs}"
-env.PATH = "${nodejs}/bin:${env.PATH}"
-npm -v
-node -v
-mkdir source
-mkdir html'''
+        echo "${nodejs}"
+        env.NODE_HOME = "${nodejs}"
+        env.PATH = "${nodejs}/bin:${env.PATH}"
+      }
+      steps {
+        sh 'npm -v'
+        sh 'node -v'
+        sh 'mkdir source'
+        sh 'mkdir html'
       }
     }
 
