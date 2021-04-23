@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  
-  tools {nodejs 'nodejs'}
-  
   stages {
     stage('dir_remove') {
       steps {
@@ -19,5 +16,8 @@ pipeline {
       }
     }
 
+  }
+  tools {
+    nodejs 'nodejs'
   }
 }
