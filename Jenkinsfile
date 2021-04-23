@@ -1,12 +1,9 @@
 pipeline {
   agent any
+  
+  tools(nodejs 'nodejs')
+  
   stages {
-    stage('tools') {
-      steps {
-        tool(name: 'nodejs', type: 'nodejs')
-      }
-    }
-
     stage('dir_remove') {
       steps {
         sh 'rm -rf *'
